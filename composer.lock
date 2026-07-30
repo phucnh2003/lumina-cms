@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "006299d6b01b478e4e293e26260819d6",
+    "content-hash": "553212ccf2f3ba2808e5ebb8d1a889c5",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -3663,6 +3663,32 @@
                 }
             },
             "description": "Lumina Taxonomies Plugin — hierarchical parent_id manager",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "lumina/webhook",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "plugins/webhook",
+                "reference": "bb8e8183a6da762f40f774dee4073abd81d5abb5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Lumina\\Webhook\\Providers\\WebhookServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lumina\\Webhook\\": "src/"
+                }
+            },
+            "description": "Lumina Webhook Plugin — outgoing webhook endpoints and delivery",
             "transport-options": {
                 "relative": true
             }
@@ -13208,7 +13234,8 @@
         "lumina/shipping": 20,
         "lumina/sliders": 20,
         "lumina/social": 20,
-        "lumina/taxonomies": 20
+        "lumina/taxonomies": 20,
+        "lumina/webhook": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

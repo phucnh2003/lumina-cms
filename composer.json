@@ -38,6 +38,7 @@
         "lumina/sliders": "@dev",
         "lumina/social": "@dev",
         "lumina/taxonomies": "@dev",
+        "lumina/webhook": "@dev",
         "opcodesio/log-viewer": "^3.24",
         "phpoffice/phpspreadsheet": "^5.9",
         "spatie/laravel-activitylog": "^5.0",
