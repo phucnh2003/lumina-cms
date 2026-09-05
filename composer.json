@@ -28,7 +28,7 @@
         "lumina/form-submits": "@dev",
         "lumina/locations": "@dev",
         "lumina/notification": "@dev",
-        "lumina/opt": "@dev",
+        "lumina/otp": "@dev",
         "lumina/payment": "@dev",
         "lumina/posts": "@dev",
         "lumina/ratings": "@dev",

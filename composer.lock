@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "553212ccf2f3ba2808e5ebb8d1a889c5",
+    "content-hash": "b571d2fd0af99f2745b099e28990d895",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -3400,12 +3400,12 @@
             }
         },
         {
-            "name": "lumina/opt",
+            "name": "lumina/otp",
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "plugins/opt",
-                "reference": "211ee243748a9d8511b269e7e4d696214370f6ad"
+                "url": "plugins/otp",
+                "reference": "ddf713b71d31c14896d4f643db2a0a65a0cb8e50"
             },
             "require": {
                 "php": "^8.3"
@@ -3673,7 +3673,7 @@
             "dist": {
                 "type": "path",
                 "url": "plugins/webhook",
-                "reference": "bb8e8183a6da762f40f774dee4073abd81d5abb5"
+                "reference": "a284bf66bcd5263281c9e277e2ca59b38de22303"
             },
             "type": "library",
             "extra": {
@@ -13225,7 +13225,7 @@
         "lumina/form-submits": 20,
         "lumina/locations": 20,
         "lumina/notification": 20,
-        "lumina/opt": 20,
+        "lumina/otp": 20,
         "lumina/payment": 20,
         "lumina/posts": 20,
         "lumina/ratings": 20,

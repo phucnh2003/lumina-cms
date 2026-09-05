@@ -445,7 +445,7 @@ Polymorphic — attach vào Post, Product, etc.
 
 ---
 
-## lumina/opt (OTP System)
+## lumina/otp (OTP System)
 
 **Namespace**: `Lumina\Otp\`
 **Vai trò**: Cung cấp dịch vụ tạo, gửi và xác thực OTP qua Email/SMS
