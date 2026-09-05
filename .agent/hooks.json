@@ -1,0 +1,32 @@
+{
+  "code-formatter": {
+    "enabled": true,
+    "PostToolUse": [
+      {
+        "matcher": "write_to_file|replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./scripts/auto-format.sh",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
+  "command-safety-guard": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./scripts/safety-check.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

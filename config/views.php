@@ -187,5 +187,13 @@ return [
             'url' => '/webhook-endpoints',
             'icon' => 'Webhook',
         ],
+        [
+            'key' => 'api-keys',
+            'title' => 'Quản lý API Keys',
+            'confirmPassword' => true,
+            'description' => 'Tạo và quản lý Key xác thực / Key bảo mật cho API Public (/api/items).',
+            'url' => '/api-keys',
+            'icon' => 'Key',
+        ],
     ],
 ];
