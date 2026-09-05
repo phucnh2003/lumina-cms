@@ -7,6 +7,16 @@ return [
         'deleted' => 'Đã xóa vai trò thành công.',
         'permission_updated' => 'Đã cập nhật phân quyền thành công.',
     ],
+    'admin' => [
+        'created' => 'Đã tạo quản trị viên.',
+        'updated' => 'Đã cập nhật quản trị viên.',
+        'deleted' => 'Đã xóa quản trị viên.',
+        'restored' => 'Đã khôi phục quản trị viên thành bản sao mới.',
+        'permanently_deleted' => 'Đã xóa vĩnh viễn quản trị viên.',
+        'bulk_deleted' => 'Đã xóa các quản trị viên đã chọn.',
+        'bulk_duplicated' => 'Đã nhân bản các quản trị viên đã chọn.',
+        'imported' => ':count quản trị viên đã được nhập.',
+    ],
     'file' => [
         'root_write_denied' => 'Bạn không có quyền ghi vào thư mục gốc.',
         'folder_write_denied' => 'Bạn không có quyền ghi vào thư mục này.',
@@ -20,10 +30,13 @@ return [
         'duplicated' => 'Nhân bản tệp thành công.',
         'compressed' => 'Nén tệp thành công.',
         'moved' => 'Di chuyển tệp thành công.',
+        'permission_updated' => 'Đã cập nhật phân quyền.',
         'permanently_deleted' => 'Đã xóa vĩnh viễn tệp.',
         'zip_only' => 'Chỉ hỗ trợ giải nén các tệp định dạng .zip.',
         'zip_open_failed' => 'Không thể mở tệp zip.',
         'move_subfolder_error' => 'Không thể di chuyển thư mục vào chính thư mục con của nó.',
+        'batch_limit_exceeded' => 'Tổng dung lượng tải lên (:total MB) vượt quá giới hạn :max MB mỗi đợt.',
+        'file_limit_exceeded' => 'Tệp :name vượt quá giới hạn :max MB cho loại tệp này.',
     ],
     'settings' => [
         'saved' => 'Đã lưu cấu hình thành công.',
@@ -32,5 +45,6 @@ return [
         'smtp_saved' => 'Đã lưu cấu hình SMTP.',
         'profile_updated' => 'Đã cập nhật thông tin cá nhân.',
         'account_deleted' => 'Đã xóa tài khoản.',
+        'password_updated' => 'Đã cập nhật mật khẩu.',
     ],
 ];

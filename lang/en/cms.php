@@ -7,6 +7,16 @@ return [
         'deleted' => 'Role deleted successfully.',
         'permission_updated' => 'Role permissions updated successfully.',
     ],
+    'admin' => [
+        'created' => 'Admin created successfully.',
+        'updated' => 'Admin updated successfully.',
+        'deleted' => 'Admin deleted successfully.',
+        'restored' => 'Admin restored successfully.',
+        'permanently_deleted' => 'Admin permanently deleted.',
+        'bulk_deleted' => 'Selected admins deleted.',
+        'bulk_duplicated' => 'Selected admins duplicated.',
+        'imported' => ':count admins imported successfully.',
+    ],
     'file' => [
         'root_write_denied' => 'You do not have write access to root.',
         'folder_write_denied' => 'You do not have write access to this folder.',
@@ -20,10 +30,13 @@ return [
         'duplicated' => 'Duplicated successfully.',
         'compressed' => 'Compressed successfully.',
         'moved' => 'Moved successfully.',
+        'permission_updated' => 'File permissions updated.',
         'permanently_deleted' => 'Permanently deleted.',
         'zip_only' => 'Only .zip files can be extracted.',
         'zip_open_failed' => 'Could not open the zip file.',
         'move_subfolder_error' => 'Cannot move a folder into its own subfolder.',
+        'batch_limit_exceeded' => 'Total upload size (:total MB) exceeds the :max MB limit per batch.',
+        'file_limit_exceeded' => ':name exceeds the :max MB limit for this file type.',
     ],
     'settings' => [
         'saved' => 'Settings saved successfully.',
@@ -32,5 +45,6 @@ return [
         'smtp_saved' => 'SMTP settings saved successfully.',
         'profile_updated' => 'Profile updated successfully.',
         'account_deleted' => 'Account deleted.',
+        'password_updated' => 'Password updated successfully.',
     ],
 ];
