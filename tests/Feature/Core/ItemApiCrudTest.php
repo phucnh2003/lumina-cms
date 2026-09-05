@@ -85,7 +85,7 @@ it('shows a single record by numeric id', function () {
 });
 
 it('shows a single record by slug', function () {
-    config(['core.model_namespaces' => array_merge(config('core.model_namespaces', []), ['Tests\\Fixtures'])]);
+    config(['core.model_namespaces' => array_merge(['Tests\\Fixtures'], config('core.model_namespaces', []))]);
 
     Schema::create('fixture_posts', function (Blueprint $table) {
         $table->id();

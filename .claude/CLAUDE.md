@@ -24,4 +24,6 @@
 @docs/superpowers/plans/2026-07-28-customer-accounts.md
 @docs/superpowers/plans/2026-07-28-otp-system-plan.md
 @docs/superpowers/plans/2026-07-28-shipping-system-plan.md
-
+# graphify
+- **graphify** (`.claude/skills/graphify/SKILL.md`) - any input to knowledge graph. Trigger: `/graphify`
+When the user types `/graphify`, use the installed graphify skill or instructions before doing anything else.

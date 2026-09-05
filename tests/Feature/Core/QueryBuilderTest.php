@@ -85,3 +85,40 @@ it('ignores search when searchFields is empty', function () {
 
     expect($results)->toHaveCount(2);
 });
+
+it('supports nested relationship loading via dot notation in fields', function () {
+    $parent = \Lumina\Taxonomies\Models\Taxonomy::create([
+        'name' => 'Parent',
+        'slug' => 'parent',
+        'type' => 'category',
+        'status' => 'active',
+    ]);
+
+    $child = \Lumina\Taxonomies\Models\Taxonomy::create([
+        'parent_id' => $parent->id,
+        'name' => 'Child',
+        'slug' => 'child',
+        'type' => 'category',
+        'status' => 'active',
+    ]);
+
+    $grandchild = \Lumina\Taxonomies\Models\Taxonomy::create([
+        'parent_id' => $child->id,
+        'name' => 'Grandchild',
+        'slug' => 'grandchild',
+        'type' => 'category',
+        'status' => 'active',
+    ]);
+
+    $results = \Lumina\Taxonomies\Models\Taxonomy::query()
+        ->whereNull('parent_id')
+        ->applyQuery([
+            'fields' => ['id', 'name', 'children.name', 'children.children.name'],
+            'limit' => -1,
+        ]);
+
+    expect($results->first()->children->first()->name)->toBe('Child');
+    expect($results->first()->children->first()->children->first()->name)->toBe('Grandchild');
+    expect($results->first()->children->first()->toArray())->not->toHaveKey('parent_id');
+});
+

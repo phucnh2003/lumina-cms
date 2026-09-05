@@ -178,5 +178,14 @@ return [
             'url' => '/horizon',
             'icon' => 'Activity',
         ],
+        [
+            'key' => 'webhooks',
+            'title' => 'Webhooks',
+            'enable' => config('plugins.webhook.enable', false),
+            'confirmPassword' => true,
+            'description' => 'Quản lý endpoint webhook, sự kiện và secret key.',
+            'url' => '/webhook-endpoints',
+            'icon' => 'Webhook',
+        ],
     ],
 ];

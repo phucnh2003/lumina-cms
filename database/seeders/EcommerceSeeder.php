@@ -116,7 +116,7 @@ class EcommerceSeeder extends Seeder
         $valBlack = $colorOption->children()->create(['name' => 'Đen', 'slug' => 'den']);
         $valBrown = $colorOption->children()->create(['name' => 'Nâu', 'slug' => 'nau']);
 
-        // Seed 20 Fashion Products
+        // Seed 20 Fashion Products with images
         $productsData = [
             [
                 'name' => ['vi' => 'Áo thun cotton Basic', 'en' => 'Basic Cotton T-Shirt'],
@@ -125,6 +125,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 100,
                 'status' => 'active',
                 'category' => 'ao-thun-nam',
+                'image' => 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Quần Jeans Slimfit Nam', 'en' => 'Slimfit Men\'s Jeans'],
@@ -133,6 +134,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 50,
                 'status' => 'active',
                 'category' => 'quan-jeans-nam',
+                'image' => 'https://images.unsplash.com/photo-1542272604-780c36856d61?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Đầm voan hoa mùa hè', 'en' => 'Summer Floral Chiffon Dress'],
@@ -141,6 +143,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 30,
                 'status' => 'active',
                 'category' => 'vay-va-dam',
+                'image' => 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Áo sơ mi lụa công sở', 'en' => 'Office Silk Blouse'],
@@ -149,6 +152,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 40,
                 'status' => 'active',
                 'category' => 'ao-so-mi-nu',
+                'image' => 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Giày Sneaker thể thao', 'en' => 'Sporty Sneaker'],
@@ -157,6 +161,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 20,
                 'status' => 'active',
                 'category' => 'giay-va-sandal',
+                'image' => 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Đồng hồ nam dây da cổ điển', 'en' => 'Classic Leather Men\'s Watch'],
@@ -165,6 +170,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 15,
                 'status' => 'active',
                 'category' => 'dong-ho-cao-cap',
+                'image' => 'https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Áo khoác Blazer nữ thời thượng', 'en' => 'Trendy Women\'s Blazer'],
@@ -173,6 +179,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 25,
                 'status' => 'active',
                 'category' => 'ao-so-mi-nu',
+                'image' => 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Quần short Kaki nam dạo phố', 'en' => 'Men\'s Streetwear Khaki Shorts'],
@@ -181,6 +188,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 60,
                 'status' => 'active',
                 'category' => 'ao-thun-nam',
+                'image' => 'https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Áo Hoodie nỉ form rộng unisex', 'en' => 'Unisex Oversized Fleece Hoodie'],
@@ -189,6 +197,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 45,
                 'status' => 'active',
                 'category' => 'ao-thun-nam',
+                'image' => 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Váy Midi xếp ly dáng dài nữ', 'en' => 'Women\'s Long Pleated Midi Skirt'],
@@ -197,6 +206,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 35,
                 'status' => 'active',
                 'category' => 'vay-va-dam',
+                'image' => 'https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Túi xách da đeo chéo sành điệu', 'en' => 'Trendy Leather Crossbody Bag'],
@@ -205,6 +215,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 18,
                 'status' => 'active',
                 'category' => 'tui-xach-nu',
+                'image' => 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Kính râm chống tia UV thời trang', 'en' => 'Fashion UV Protection Sunglasses'],
@@ -213,6 +224,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 80,
                 'status' => 'active',
                 'category' => 'phu-kien-thoi-trang',
+                'image' => 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Thắt lưng da nam công sở', 'en' => 'Men\'s Office Leather Belt'],
@@ -221,6 +233,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 50,
                 'status' => 'active',
                 'category' => 'phu-kien-thoi-trang',
+                'image' => 'https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Giày cao gót nữ thanh lịch', 'en' => 'Elegant Women\'s High Heels'],
@@ -229,6 +242,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 22,
                 'status' => 'active',
                 'category' => 'giay-va-sandal',
+                'image' => 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Áo len cổ lọ nam ấm áp', 'en' => 'Warm Men\'s Turtleneck Sweater'],
@@ -237,6 +251,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 30,
                 'status' => 'active',
                 'category' => 'ao-khoac-nam',
+                'image' => 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Áo khoác phao dáng ngắn', 'en' => 'Short Puffer Jacket'],
@@ -245,6 +260,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 15,
                 'status' => 'active',
                 'category' => 'ao-khoac-nam',
+                'image' => 'https://images.unsplash.com/photo-1544441893-675973e31985?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Bộ Pijama lụa satin cao cấp', 'en' => 'Premium Satin Silk Pijama Set'],
@@ -253,6 +269,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 28,
                 'status' => 'active',
                 'category' => 'vay-va-dam',
+                'image' => 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Mũ lưỡi trai thêu cá tính', 'en' => 'Cool Embroidered Baseball Cap'],
@@ -261,6 +278,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 70,
                 'status' => 'active',
                 'category' => 'phu-kien-thoi-trang',
+                'image' => 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Quần Tây âu nam công sở', 'en' => 'Elegant Men\'s Office Trousers'],
@@ -269,6 +287,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 40,
                 'status' => 'active',
                 'category' => 'quan-jeans-nam',
+                'image' => 'https://images.unsplash.com/photo-1479064555552-3ef4979f8908?w=800&auto=format&fit=crop&q=80',
             ],
             [
                 'name' => ['vi' => 'Túi tote vải canvas đơn giản', 'en' => 'Simple Canvas Tote Bag'],
@@ -277,6 +296,7 @@ class EcommerceSeeder extends Seeder
                 'stock' => 120,
                 'status' => 'active',
                 'category' => 'tui-xach-nu',
+                'image' => 'https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop&q=80',
             ],
         ];
 
@@ -295,11 +315,12 @@ class EcommerceSeeder extends Seeder
                 $product->categories()->attach($createdCategories[$prod['category']]->id);
             }
 
-            // Create 2 variants for each product & associate Option Values
+            // Create 2 variants for each product & associate Option Values and images
             $isWatch = $prod['category'] === 'dong-ho-cao-cap';
 
             $var1 = $product->variants()->create([
                 'name' => $isWatch ? 'Dây Da Đen (Black Leather)' : 'Size M',
+                'image' => ['url' => $prod['image']],
                 'price' => $prod['price'],
                 'sale_price' => $prod['price'] + 30000,
                 'stock' => intval($prod['stock'] / 2),
@@ -310,6 +331,7 @@ class EcommerceSeeder extends Seeder
 
             $var2 = $product->variants()->create([
                 'name' => $isWatch ? 'Dây Da Nâu (Brown Leather)' : 'Size L',
+                'image' => ['url' => $prod['image']],
                 'price' => $prod['price'] + 20000,
                 'sale_price' => $prod['price'] + 50000,
                 'stock' => intval($prod['stock'] / 2),

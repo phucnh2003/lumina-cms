@@ -4,6 +4,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Schema;
 use Lumina\Cms\Models\Admin;
+use Lumina\Taxonomies\Models\ProductCategory;
 use Tests\Fixtures\Post;
 
 uses(RefreshDatabase::class);
@@ -11,7 +12,7 @@ uses(RefreshDatabase::class);
 beforeEach(function () {
     $this->actingAs(Admin::factory()->create(), 'admin');
 
-    config(['core.model_namespaces' => array_merge(config('core.model_namespaces', []), ['Tests\\Fixtures'])]);
+    config(['core.model_namespaces' => array_merge(['Tests\\Fixtures'], config('core.model_namespaces', []))]);
 
     Schema::create('fixture_posts', function (Blueprint $table) {
         $table->id();
@@ -95,4 +96,30 @@ it('uses a real fulltext query for fields declared in $fulltextSearchable', func
     ]));
 
     expect($call)->toThrow(RuntimeException::class, 'does not support fulltext search');
+});
+
+it('transforms translatable fields on loaded relations', function () {
+    $parent = ProductCategory::create([
+        'name' => json_encode(['vi' => 'Thời trang Nam', 'en' => "Men's Fashion"]),
+        'slug' => 'thoi-trang-nam-test',
+        'status' => 'active',
+    ]);
+
+    ProductCategory::create([
+        'name' => json_encode(['vi' => 'Áo thun Nam', 'en' => "Men's T-Shirts"]),
+        'slug' => 'ao-thun-nam-test',
+        'status' => 'active',
+        'parent_id' => $parent->id,
+    ]);
+
+    $response = $this->getJson('/api/items/product-categories?'.http_build_query([
+        'filter' => ['slug' => ['_eq' => 'thoi-trang-nam-test']],
+        'fields' => ['slug', 'name', 'id', 'children.name'],
+        'locale' => 'vi',
+        'limit' => -1,
+    ]));
+
+    $response->assertOk();
+    expect($response->json('data.0.name'))->toBe('Thời trang Nam');
+    expect($response->json('data.0.children.0.name'))->toBe('Áo thun Nam');
 });
